@@ -1,0 +1,118 @@
+#!/bin/sh
+###########################################################################
+##                                                                       ##
+##                   Carnegie Mellon University and                      ##
+##                   Alan W Black and Kevin A. Lenzo                     ##
+##                      Copyright (c) 1998-2000                          ##
+##                        All Rights Reserved.                           ##
+##                                                                       ##
+##  Permission is hereby granted, free of charge, to use and distribute  ##
+##  this software and its documentation without restriction, including   ##
+##  without limitation the rights to use, copy, modify, merge, publish,  ##
+##  distribute, sublicense, and/or sell copies of this work, and to      ##
+##  permit persons to whom this work is furnished to do so, subject to   ##
+##  the following conditions:                                            ##
+##   1. The code must retain the above copyright notice, this list of    ##
+##      conditions and the following disclaimer.                         ##
+##   2. Any modifications must be clearly marked as such.                ##
+##   3. Original authors' names are not deleted.                         ##
+##   4. The authors' names are not used to endorse or promote products   ##
+##      derived from this software without specific prior written        ##
+##      permission.                                                      ##
+##                                                                       ##
+##  CARNEGIE MELLON UNIVERSITY AND THE CONTRIBUTORS TO THIS WORK         ##
+##  DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING      ##
+##  ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT   ##
+##  SHALL CARNEGIE MELLON UNIVERSITY NOR THE CONTRIBUTORS BE LIABLE      ##
+##  FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    ##
+##  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN   ##
+##  AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,          ##
+##  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF       ##
+##  THIS SOFTWARE.                                                       ##
+##                                                                       ##
+###########################################################################
+##                                                                       ##
+##  Build a power model                                                  ##
+##                                                                       ##
+##  Many parameterizations are possible and training techniques, many of ##
+##  which will be better than what is here, but from experience this     ##
+##  give a model that is substantially better than simply means durations##
+##  with hand speicifed modification factors at the phrasal boundaries   ##
+##                                                                       ##
+##  Builds CART tree that predicts zscores of durations                  ##
+##                                                                       ##
+##  This is the *whole* thing, you probably want to actually do each     ##
+##  stage by hand (the training itself can takes days)                   ##
+##                                                                       ##
+###########################################################################
+
+#  if [ $# != 3 ]
+#  then
+#      echo "Build a duration model, requires basic utterances to be pre-built"
+#      echo "Usage: make_dur_model VOX PHONESET SILENCENAME"
+#      echo "INST is the insstitute building the language, e.g. cmu, cstr, ogi"
+#      echo "     if there isn't an appropriate institute use, net."
+#      echo "LANG is language identifier, e.g. japan, scotsgaelic"
+#      echo "VOX is speaker identifier e.g kal, awb"
+#      exit 1
+#  fi
+
+if [ ! "$ESTDIR" ]
+then
+   echo "environment variable ESTDIR is unset"
+   echo "set it to your local speech tools directory e.g."
+   echo '   bash$ export ESTDIR=/home/awb/projects/speech_tools/'
+   echo or
+   echo '   csh% setenv ESTDIR /home/awb/projects/speech_tools/'
+   exit 1
+fi
+
+. etc/voice.defs
+
+SILENCENAME=pau
+MODELNAME=$FV_VOICENAME
+VOICENAME="(voice_"$FV_VOICENAME"_clunits)"
+VOICESCM=${3:-festvox/${MODELNAME}_clunits.scm}
+
+POWMEANSTD=$ESTDIR/../festival/examples/powmeanstd
+DUMPFEATS=$ESTDIR/../festival/examples/dumpfeats
+WAGON=$ESTDIR/bin/wagon
+WAGON_TEST=$ESTDIR/bin/wagon_test
+
+# ## find the means and stddev for durations in database
+# echo ";;; Finding mean power and standard deviation of each phone type"
+# $POWMEANSTD -output festival/pow/etc/pow.meanstd festival/uttsp/*.utt
+
+# ## extract the features
+# echo ";;; Extracting features from utterances"
+# $DUMPFEATS -relation Segment -eval $VOICESCM -eval $VOICENAME -feats festival/pow/etc/pow.feats -output festival/pow/feats/%s.feats -eval festival/pow/etc/logpown.scm festival/uttsp/*.utt
+
+# ## Save all features in one file removing silence phones
+# echo ";;; Collecting features in training and test data"
+# cat festival/pow/feats/*.feats | awk '{if ($2 != "'$SILENCENAME'") print $0}' >festival/pow/data/pow.data
+# bin/traintest festival/pow/data/pow.data
+# bin/traintest festival/pow/data/pow.data.train
+
+# # Build description file
+# echo ";;; Build feature description file"
+# $ESTDIR/bin/make_wagon_desc festival/pow/data/pow.data festival/pow/etc/pow.feats festival/pow/etc/pow.desc
+# festival -b --heap 2000000 festvox/build_prosody.scm $VOICESCM $VOICENAME '(build_pow_feats_desc)'
+
+# # emacs festival/pow/etc/pow.desc
+
+STOP=25
+PREF=pow
+
+(
+echo ";;; Build the powation model itself"
+$WAGON -data festival/pow/data/pow.data.train.train -desc festival/pow/etc/pow.desc -test festival/pow/data/pow.data.train.test -stop $STOP -output festival/pow/tree/$PREF.S$STOP.tree -stepwise 
+
+echo ";;; Test the duration model"
+$WAGON_TEST -heap 2000000 -data festival/pow/data/pow.data.test -desc festival/pow/etc/pow.desc -tree festival/pow/tree/$PREF.S$STOP.tree ) |
+tee pow.$PREF.S$STOP.out
+
+echo ";;; Constructing the duration model as a loadable scheme file"
+festival -b --heap 2000000 festvox/build_prosody.scm $VOICESCM $VOICENAME '(finalize_pow_model "'$MODELNAME'" "'$PREF.S$STOP.tree'")'
+
+exit
+

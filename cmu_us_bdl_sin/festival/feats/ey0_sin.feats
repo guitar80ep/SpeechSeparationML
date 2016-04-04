@@ -1,0 +1,15 @@
+0 pau - 0 0 0 0 0 0 - t - s 0 0 0 0 a - 0.19 121.158 104.749 120.342 0 coda coda coda 0 0 1 0 0 0 initial pau - 0 0 0 0 0 0 - 0 1 content 0 content 
+1 ch - a 0 0 0 0 p - t - s 0 0 0 0 a - 0.13 96.4748 92.3071 105.486 0 coda coda coda 0 0 1 0 0 1 initial r - r 0 0 0 0 a + 0 0 content content content 
+2 k - s 0 0 0 0 v - aa + 0 3 l 3 - 0 0 0.11 99.1748 104.164 93.7239 0 coda coda onset 0 1 0 1 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content det content 
+3 ax + 0 2 a 2 - 0 0 t - s 0 0 0 0 a - 0.12 84.8891 86.8063 84.2856 0 coda coda coda 0 0 1 0 0 1 initial dh - f 0 0 0 0 d + 0 0 content det 0 
+4 ow + 0 2 d 3 + 0 0 t - s 0 0 0 0 a - 0.19 106.59 98.9964 110.581 0 coda coda coda 0 0 1 0 0 1 initial n - n 0 0 0 0 a + 0 0 content det content 
+5 l - l 0 0 0 0 a + t - s 0 0 0 0 a - 0.0900002 87.6446 89.8707 86.0864 0 coda coda coda 0 0 1 0 0 0 mid ax + 0 2 a 2 - 0 0 0 0 content content det 
+6 uw + 0 1 l 3 + 0 0 t - s 0 0 0 0 a - 0.13 95.8404 98.5507 99.6215 0 coda coda coda 1 0 1 0 3 0 final y - r 0 0 0 0 p + 0 0 content to content 
+7 v - f 0 0 0 0 b + k - s 0 0 0 0 v - 0.11 102.292 107.959 101.301 0 coda coda onset 0 1 0 0 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content det in 
+8 g - s 0 0 0 0 v + t - s 0 0 0 0 a - 0.0800002 101.612 104.521 96.8535 0 coda coda coda 0 0 1 0 0 0 mid ng - n 0 0 0 0 v + 0 0 content in content 
+9 n - n 0 0 0 0 a + ow + 0 2 d 3 + 0 0 0.16 83.9195 86.5552 80.4052 0 coda coda onset 0 1 0 1 0 1 initial s - f 0 0 0 0 a - 0 0 content content 0 
+10 z - f 0 0 0 0 a + t - s 0 0 0 0 a - 0.13 105.984 114.694 102.499 0 coda coda coda 0 0 1 0 0 1 initial ih + 0 1 s 1 - 0 0 0 0 content pps content 
+11 k - s 0 0 0 0 v - t - s 0 0 0 0 a - 0.0999999 88.0232 89.5239 87.4879 0 coda coda coda 0 0 1 0 0 0 mid ow + 0 2 d 3 + 0 0 0 0 content cc 0 
+12 iy + 0 1 l 1 - 0 0 t - s 0 0 0 0 a - 0.15 95.9067 99.4284 93.45 0 coda coda coda 0 0 1 0 0 1 initial l - l 0 0 0 0 a + 0 0 content content content 
+13 t - s 0 0 0 0 a - m - n 0 0 0 0 l + 0.11 100.655 103.371 98.5068 0 coda onset coda 0 0 1 1 1 0 final n - n 0 0 0 0 a + 0 0 content in md 
+14 m - n 0 0 0 0 l + n - n 0 0 0 0 a + 0.0700001 103.446 102.613 105.035 0 coda coda onset 0 1 0 0 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content to det 

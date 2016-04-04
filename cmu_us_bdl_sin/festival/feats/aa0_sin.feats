@@ -1,0 +1,15 @@
+0 v - f 0 0 0 0 b + l - l 0 0 0 0 a + 0.04 99.6927 100.444 93.1495 0 coda coda onset 0 1 0 0 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content det 0 
+1 r - r 0 0 0 0 a + d - s 0 0 0 0 a + 0.08 106.242 106.34 109.042 0 coda coda coda 0 0 1 0 1 0 final m - n 0 0 0 0 l + 0 0 content 0 content 
+2 hh - f 0 0 0 0 g - r - r 0 0 0 0 a + 0.04 94.259 94.286 93.6283 0 coda coda onset 0 1 0 0 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content det 0 
+3 s - f 0 0 0 0 a - r - r 0 0 0 0 a + 0.03 94.3005 96.1506 94.5677 0 coda coda onset 0 1 0 0 0 1 initial d - s 0 0 0 0 a + 0 0 content cc 0 
+4 jh - a 0 0 0 0 p + r - r 0 0 0 0 a + 0.03 105.431 106.472 104.643 0 coda coda coda 0 0 1 0 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content content 0 
+5 n - n 0 0 0 0 a + k - s 0 0 0 0 v - 0.04 104.392 104.147 107.011 0 coda coda onset 0 1 0 0 0 1 initial d - s 0 0 0 0 a + 0 0 content cc aux 
+6 r - r 0 0 0 0 a + n - n 0 0 0 0 a + 0.0500001 97.6808 99.3035 97.9472 0 coda coda onset 0 2 0 0 0 1 initial f - f 0 0 0 0 b - 0 0 content in cc 
+7 m - n 0 0 0 0 l + n - n 0 0 0 0 a + 0.09 118.69 108.602 115.563 0 coda coda onset 0 1 0 0 0 0 initial pau - 0 0 0 0 0 0 - 0 0 content 0 aux 
+8 w - r 0 0 0 0 l + d - s 0 0 0 0 a + 0.0400001 91.2395 90.7819 92.2503 0 coda coda onset 0 2 0 0 0 1 initial k - s 0 0 0 0 v - 0 0 content cc content 
+9 r - r 0 0 0 0 a + s - f 0 0 0 0 a - 0.0500001 99.8258 97.6151 102.806 0 coda coda onset 0 2 0 0 0 1 initial p - s 0 0 0 0 l - 0 0 content content 0 
+10 t - s 0 0 0 0 a - l - l 0 0 0 0 a + 0.0700001 103.245 105.947 101.521 0 coda coda coda 0 0 1 0 1 0 final ae + 0 3 s 1 - 0 0 0 0 content content aux 
+11 r - r 0 0 0 0 a + uw + 0 1 l 3 + 0 0 0.04 118.146 103.702 118.143 0 coda coda onset 0 1 0 1 0 1 initial d - s 0 0 0 0 a + 0 0 content cc content 
+12 p - s 0 0 0 0 l - t - s 0 0 0 0 a - 0.04 99.5758 94.5515 98.7931 0 coda coda onset 0 1 0 0 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content det 0 
+13 g - s 0 0 0 0 v + l - l 0 0 0 0 a + 0.03 99.7519 98.1023 110.035 0 coda coda onset 0 1 0 0 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content det content 
+14 t - s 0 0 0 0 a - r - r 0 0 0 0 a + 0.0600001 104.995 100.651 105.692 0 coda coda onset 0 2 0 0 0 1 initial s - f 0 0 0 0 a - 0 0 content cc 0 

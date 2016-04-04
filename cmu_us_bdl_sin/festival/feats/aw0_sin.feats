@@ -1,0 +1,10 @@
+0 z - f 0 0 0 0 a + t - s 0 0 0 0 a - 0.14 113.796 116.739 112.662 0 coda coda coda 0 0 1 0 0 1 initial ih + 0 1 s 1 - 0 0 0 0 content pps content 
+1 s - f 0 0 0 0 a - t - s 0 0 0 0 a - 0.0999999 98.3107 98.5464 99.4782 0 coda coda coda 0 0 1 0 0 1 initial ih + 0 1 s 1 - 0 0 0 0 content det content 
+2 d - s 0 0 0 0 a + er + r 2 a 2 - 0 0 0.03 101.805 102.256 101.466 0 coda coda coda 0 0 1 1 0 1 initial n - n 0 0 0 0 a + 0 0 content content content 
+3 l - l 0 0 0 0 a + er + r 2 a 2 - 0 0 0.0400001 103.315 110.719 101.798 0 coda coda coda 0 0 1 1 0 1 initial ax + 0 2 a 2 - 0 0 0 0 content content cc 
+4 ax + 0 2 a 2 - 0 0 t - s 0 0 0 0 a - 0.13 95.6588 95.6977 93.1503 0 coda coda coda 0 0 1 0 0 1 initial t - s 0 0 0 0 a - 0 0 content to content 
+5 r - r 0 0 0 0 a + t - s 0 0 0 0 a - 0.09 97.2616 98.3781 97.8465 0 coda coda coda 0 0 1 0 0 1 initial ao + 0 3 l 3 + 0 0 0 0 content content content 
+6 k - s 0 0 0 0 v - er + r 2 a 2 - 0 0 0.05 97.2536 98.0409 96.1655 0 coda coda coda 0 0 1 1 0 1 initial ay + 0 3 d 2 - 0 0 0 0 content content content 
+7 m - n 0 0 0 0 l + er + r 2 a 2 - 0 0 0.0600001 102.731 99.8766 100.138 0 coda coda coda 0 0 1 1 0 3 initial eh + 0 2 s 1 - 0 0 0 0 content content content 
+8 ng - n 0 0 0 0 v + er + r 2 a 2 - 0 0 0.03 104.663 107.806 101.777 0 coda coda coda 0 0 1 1 0 1 initial ih + 0 1 s 1 - 0 0 0 0 content content 0 
+9 p - s 0 0 0 0 l - n - n 0 0 0 0 a + 0.24 97.169 93.5588 106.345 0 coda coda coda 1 0 1 0 4 0 final m - n 0 0 0 0 l + 0 0 content det 0 

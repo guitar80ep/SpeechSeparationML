@@ -1,0 +1,5 @@
+0 g - s 0 0 0 0 v + ih + 0 1 s 1 - 0 0 0.0899999 104.097 102.963 100.857 1 onset coda coda 1 0 1 0 0 0 mid eh + 0 2 s 1 - 0 0 0 0 content pps 0 
+1 t - s 0 0 0 0 a - ih + 0 1 s 1 - 0 0 0.0999999 106.727 113.459 104.523 1 onset coda coda 0 0 1 0 0 1 initial s - f 0 0 0 0 a - 0 0 content content content 
+2 g - s 0 0 0 0 v + ae + 0 3 s 1 - 0 0 0.07 105.777 113.853 103.944 1 onset coda coda 0 0 1 0 0 0 mid ih + 0 1 s 1 - 0 0 0 0 content content det 
+3 z - f 0 0 0 0 a + ih + 0 1 s 1 - 0 0 0.14 119.121 122.841 118.564 1 onset coda coda 1 0 1 0 1 1 single ih + 0 1 s 1 - 0 0 0 0 content content content 
+4 b - s 0 0 0 0 l + er + r 2 a 2 - 0 0 0.1 101.967 103.567 101.071 1 onset coda coda 0 0 1 0 1 0 final ax + 0 2 a 2 - 0 0 0 0 content aux det 
